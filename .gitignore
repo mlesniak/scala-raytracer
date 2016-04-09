@@ -7,5 +7,4 @@ target
 /.settings
 /RUNNING_PID
 
-# Ignore generated play keystore
-/conf/generated.keystore%
+image.png
