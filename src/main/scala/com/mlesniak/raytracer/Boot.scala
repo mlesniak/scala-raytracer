@@ -4,13 +4,15 @@ import java.awt.Color
 import java.awt.image.BufferedImage
 import javax.imageio.ImageIO
 
+import com.typesafe.scalalogging.StrictLogging
+
 /**
   * Application entry point.
   *
   * @author Michael Lesniak (mlesniak@micromata.de)
   */
-object Boot extends App {
-  println("Start")
+object Boot extends App with StrictLogging {
+  logger.info("Starting")
 
   // Draw single pixels.
   val size = (320, 200)
@@ -22,5 +24,5 @@ object Boot extends App {
   }
 
   ImageIO.write(canvas, "png", new java.io.File("image.png"))
-  println("Finish")
+  logger.info("Finished")
 }
