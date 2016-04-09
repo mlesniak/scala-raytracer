@@ -1,4 +1,4 @@
-package com.mlesniak.raytracing
+package com.mlesniak.raytracer
 
 import com.mlesniak.raytracer.{Vector3DOperations, Vector3D}
 import org.scalatest._
