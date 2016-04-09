@@ -8,4 +8,6 @@ are motivated by the book
 > 1989, The Morgan Kaufmann Series in Computer Graphics
 
 
- 
+# License
+
+Copyright (c) 2016 Michael Lesniak, licensed under the Apache License.
