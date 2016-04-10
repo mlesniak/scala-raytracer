@@ -19,7 +19,14 @@ object Boot extends App with StrictLogging {
   val canvas = new BufferedImage(size._1, size._2, BufferedImage.TYPE_INT_RGB)
   (0 until size._2).foreach { y =>
     (0 until size._1).foreach { x =>
-      canvas.setRGB(x, y, (Math.random() * Int.MaxValue).asInstanceOf[Int])
+      val rgb = {
+        val r = x % 0xFF
+        val g = y % 0xFF
+        val b = 30 % 0xFF
+        val rgb = r << 16 | g << 8 | b
+        rgb.asInstanceOf[Int]
+      }
+      canvas.setRGB(x, y, rgb)
     }
   }
 
